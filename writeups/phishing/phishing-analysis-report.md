@@ -8,7 +8,7 @@ Confidence: High (Virus Total, Hybrid Analysis, SPF fail, typosquat)
 
 <u>Screenshot of the email:</u>
 
-![[email-1261 2.png]]
+![email screenshot](screenshots/email-1621-2.png)
 ## Section 1 : Email Description and Artifacts Retrieved:
 
 <u>Email description</u>: 
