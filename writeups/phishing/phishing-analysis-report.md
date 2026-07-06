@@ -15,6 +15,8 @@ Confidence: High (VirusTotal, Hybrid Analysis, SPF fail, typosquat)
 **Screenshot of the email:**
 
 ![email screenshot](screenshots/email-1261-2.png)
+
+Source: https://github.com/rf-peixoto/phishing_pot (sample-1261.eml)
 ## Section 1 : Email Description and Artifacts Retrieved:
 
 **Email description:**
