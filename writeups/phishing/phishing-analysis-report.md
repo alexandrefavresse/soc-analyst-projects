@@ -10,7 +10,7 @@ Classification: Malicious (credential harvesting phishing email)
 
 Severity: High
 
-Confidence: High (Virus Total, Hybrid Analysis, SPF fail, typosquat)
+Confidence: High (VirusTotal, Hybrid Analysis, SPF fail, typosquat)
 
 **Screenshot of the email:**
 
