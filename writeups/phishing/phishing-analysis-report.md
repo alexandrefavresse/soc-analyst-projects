@@ -1,6 +1,6 @@
 # Phishing analysis report:
 
-<u>Verdict:</u>
+<ins>Verdict:</ins>
 
 Classification: Malicious (credential harvesting phishing email)
 Severity: High
