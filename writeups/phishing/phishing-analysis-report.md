@@ -57,7 +57,7 @@ hosngpackingss[.]com domain, which is a strong indicator of spoofing.
 After checking, the sending server IP is registered to M247-LTD-Singapore, a hosting provider with a Singapore geolocation, showing discrepancies between the sending email address, which impersonates HosnG Packaging, based in China.  
 MITRE ATT&CK T1656 - Impersonation
 
-![[email-1261-whoisresult.png|436]]
+![whois screenshot](screenshots/email-1261whoisresult.png)
 
 <u>Attachment file - File name:</u>
 
@@ -72,24 +72,24 @@ File Extension
 The attachment is flagged as malicious on VirusTotal and is categorized as a malware belonging to the Beluga phishing campaign using .htm files to capture companies' credentials. 
 MITRE ATT&CK T1566.001 - Phishing: Spearphishing Attachment 
 
-![[email-1261-virustotal.png]]
+![virustotal screenshot](screenshots/email-1261-virustotal.png)
 
 <u>Attachment file - Hybrid Analysis:</u>
 
 Hybrid Analysis is also categorizing the file as malicious and provides with a screenshot of the detonated file, showing that it prompts the user for its credentials, while it impersonates a Microsoft Excel Reader window, acting as a credential harvester.
 MITRE ATT&CK T1056.003 - Web Portal Capture and T1656 – Impersonation
 
-![[email-1261-hybridanalysis-sampleresult 1.png]]
+![hybridanalysis screenshot](screenshots/email-1261-hybridanalysis-sampleresult-1.png)
 
 
-![[email-1261-hybridanalysis-screenshotsample 1.png]]
+![hybridanalysis screenshot2](screenshots/email-1261-hybridanalysis-screenshotsample-1.png)
 
 <u>Attachment file - Static code analysis:</u>
 
 After opening the .htm file with Sublime Text I found the URL (see line 59 on screenshot below) used used to POST the user credentials to an external website for later extraction by the attacker, with a redirect to a legitimate Microsoft website to conceal the malicious activity from the user, confirming the file acts as a credential harvester.
 MITRE ATT&CK T1056.003 - Web Portal Capture
 
-![[email-1261-static-code-analysis2.png]]
+![static code screenshot](screenshots/email-1261-static-code-analysis2.png)
 
 ## Section 4: MITRE ATT&CK Mapping
 
