@@ -57,7 +57,7 @@ hosngpackingss[.]com domain, which is a strong indicator of spoofing.
 After checking, the sending server IP is registered to M247-LTD-Singapore, a hosting provider with a Singapore geolocation, showing discrepancies between the sending email address, which impersonates HosnG Packaging, based in China.  
 MITRE ATT&CK T1656 - Impersonation
 
-![whois screenshot](screenshots/email-1261whoisresult.png)
+![whois screenshot](screenshots/email-1261-whoisresult.png)
 
 <u>Attachment file - File name:</u>
 
