@@ -1,6 +1,10 @@
 # Phishing analysis report:
 
-**Verdict:**
+Analyst: Alexandre Favresse
+
+Date of Analysis: 06-07-2026
+
+Report ID: PHISH-2026-001
 
 Classification: Malicious (credential harvesting phishing email)
 
@@ -20,7 +24,7 @@ The email is using business impersonation techniques and typosquatting technique
 **Artifacts:**  
 
 Sending Email Address: info[@]hosngpackingss[.]com  
-	Note: typosquat (hosngpackaginsS)
+	Note: typosquat (hosngpackagingsS)
 
 Date Sent: 21 May 2023 19:40:13
 
@@ -88,7 +92,7 @@ MITRE ATT&CK T1056.003 - Web Portal Capture and T1656 – Impersonation
 
 **Attachment file - Static code analysis**
 
-After opening the .htm file with Sublime Text I found the URL (see line 59 on screenshot below) used used to POST the user credentials to an external website for later extraction by the attacker, with a redirect to a legitimate Microsoft website to conceal the malicious activity from the user, confirming the file acts as a credential harvester.
+After opening the .htm file with Sublime Text I found the URL (see line 59 on screenshot below)  used to POST the user credentials to an external website for later extraction by the attacker, with a redirect to a legitimate Microsoft website to conceal the malicious activity from the user, confirming the file acts as a credential harvester.
 MITRE ATT&CK T1056.003 - Web Portal Capture
 
 ![static code screenshot](screenshots/email-1261-static-code-analysis2.png)
@@ -117,7 +121,7 @@ MITRE ATT&CK T1056.003 - Web Portal Capture
 
 
 
-## Section 5: Suggested Defensive Measures:
+## Section 6: Suggested Defensive Measures:
 
 - Email address and domain:
   I recommend to block emails coming from info[@]hosngpackingss[.]com and the domain hosngpackingss[.]com at the email gateway as the address is using typosquatting techniques to impersonate a legitimate brand.
