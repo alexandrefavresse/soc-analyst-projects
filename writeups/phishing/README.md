@@ -12,7 +12,6 @@ It's 13:00, lunch is over and an alert appears in the company's SIEM, the email 
 
 In this section I will cover the methodology and the tools I used to analyse the phishing sample, to have more information about it and context, please refer to the phishing-analysis-report as it is more comprehensive.
 
-**Methodology and Tools**
 I used Thunderbird to open the .eml file to have a preview of the sample and make a first-hand analysis, during which I noticed discrepancies between the sending address and the signature of the email and typo squatting techniques used for the sending address and inconsistencies in the email layout, which all lead me to think that the email was used for malicious purposes.
 
 I then used Sublime Text editor to extract the email artifacts such as the sending server IP and also to check the authentication results and I noticed that the SPF results came back as failed, which is a strong indicator that the sending email address was spoofed.
