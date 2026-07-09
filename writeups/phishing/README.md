@@ -1,40 +1,142 @@
-# Introduction
+# Phishing analysis report:
 
-The phishing analysis report present in this repo was made during a homemade lab and is presented as a simulation of a real phishing report that a SOC Analyst would write after an alert. For this purpose, I used a real phishing sample from https://github.com/rf-peixoto/phishing_pot (sample-1261.eml) to keep the simulation as realistic as possible. The goal of this exercice is to practice my analysis and reporting skills in an environment as realistic as possible, as writing reports is an important part of a SOC Analyst duty and I chose a phishing sample because phishing represents the main attack vector for initial access (MITRE ATT&CK - T1566 - Phishing). 
+Analyst: Alexandre Favresse
 
-Disclaimer: All data is from a public sample; recipient info masked for privacy.
+Date of Analysis: 06-07-2026
 
-# Scenario
+Report ID: PHISH-2026-001
 
-It's 13:00, lunch is over and an alert appears in the company's SIEM, the email gateway detected a suspicious email sent to one of the company's employees, containing a file attachment ending in .htm and flagged it. Alexandre, a junior SOC Analyst, takes ownership of the alert. After investigating it, he classifies it as a true positive and sends a phishing analysis report to justify his classification. 
+Classification: Malicious (credential harvesting phishing email)
 
-# Methodology and Tools
+Severity: High
 
-In this section I will cover the methodology and the tools I used to analyse the phishing sample, to have more information about it and context, please refer to the phishing-analysis-report as it is more comprehensive.
+Confidence: High (VirusTotal, Hybrid Analysis, SPF fail, typosquat)
 
-I used Thunderbird to open the .eml file to have a preview of the sample and make a first-hand analysis, during which I noticed discrepancies between the sending address and the signature of the email and typo squatting techniques used for the sending address and inconsistencies in the email layout, which all lead me to think that the email was used for malicious purposes.
+**Screenshot of the email:**
 
-I then used Sublime Text editor to extract the email artifacts such as the sending server IP and also to check the authentication results and I noticed that the SPF results came back as failed, which is a strong indicator that the sending email address was spoofed.
+![email screenshot](screenshots/email-1261-2.png)
 
-I proceeded to an IP check on whois to find the geolocation of the server used to send the email and found discrepancies between the location of the server and the location of the company the email is trying to impersonate, which confirms that an impersonation technique was used for phishing purposes.
+Source: https://github.com/rf-peixoto/phishing_pot (sample-1261.eml)
+## Section 1 : Email Description and Artifacts Retrieved:
 
-I noticed that the file attached had a double extension and I used the command line on Kali Linux to extract the SHA256 hash of the attached file to later on analyse it on VirusTotal and Hybrid Analysis. 
-The file was categorized as malicious on both websites and I gathered information about the type of malware that was used for the attack (Beluga) and I was able to see a preview of the opened file on Hybrid Analysis, which helped to understand what kind of phishing attack it was and it led my to think that it was a credential harvesting attack. 
+**Email description:**
 
-After the results came back as malicious from these websites, I proceeded to a static analysis of the html code of the file to extract the URL used for the POST method of the malware to extract credentials to add it to the list of the IOCs and confirm the malicious purpose of the attached document.
+The email is using business impersonation techniques and typosquatting techniques to appear to be from the legitimate company HosnG Packaging to ask to review an attached contract for a new order, it contains bad grammar and inconsistent layout and inconsistencies regarding the company the email is trying to impersonate between the sending email address (HosnG Packaging) and the companies cited in the body under the signature of the supposed sender.
 
-In the last section I present suggested defensive measures such as blocking the sending email address and domain, the file hash of the attachment and the url and domain of the website used for credentials extraction. 
+**Artifacts:**  
 
-# MITRE ATT&CK Mapping & IOCs gathering
+Sending Email Address: info[@]hosngpackingss[.]com  
+	Note: typosquat (hosngpackagingsS)
 
-I identified the tactics and techniques used according to the MITRE ATT&CK framework and highlighted them in the MITRE ATT&CK mapping in the analysis section of the report and I also made a recap of the tactics and techniques used below to allow a quick overview for the reader of the report. I also gathered all the IOCs that were found and dedicated a section to it to facilitate their extraction to add them to the threat intelligence program of the fictive company.
+Date Sent: 21 May 2023 19:40:13
+
+Sending Server IP: 146[.]70[.]149[.]246
+
+Reverse DNS: DNS Record not found
+
+Recipient(s): masked[@]protonmail.com
+
+Subject: New Business Inquiry:RE: RE:Signed Contract -NEW ORDER (PO#WB-UK-0022)
+
+Attachments name:  PO45638 - PO76483.Xls.htm
+	Note: double file extension .xls.htm
+
+Attachments SHA256 hash: 932e18daa8184ed41735e136cf0d7c148295064153e653ada7d79e8e80216d72
+
+URL: hxxps://glottogonic-depende[.]000webhostapp[.]com/Excel.php
+	Note: URL extracted from attachment static code analysis
+
+Domain: glottogonic-depende[.]000webhostapp[.]com
+
+## Section 2: Authentication results:
+
+DMARC: none
+
+SPF: fail 
+
+DKIM: none
+
+Remarks: SPF failed, showing the sending IP 146[.]70[.]149[.]246 is not authorized for the 
+hosngpackingss[.]com domain, which is a strong indicator of spoofing.
+## Section 3: Analysis:
+
+**Sending server ip - whois:**
+
+After checking, the sending server IP is registered to M247-LTD-Singapore, a hosting provider with a Singapore geolocation, showing discrepancies between the sending email address, which impersonates HosnG Packaging, based in China.  
+MITRE ATT&CK T1656 - Impersonation
+
+![whois screenshot](screenshots/email-1261-whoisresult.png)
+
+**Attachment file - File name:***
+
+The attachment "PO45638 - PO76483.Xls.htm" uses a double file 
+extension (.Xls.htm) to disguise an HTML file as a legitimate 
+Excel spreadsheet for credential harvesting purposes (see Hybrid Analysis screenshot below).
+MITRE ATT&CK T1036.007 - Masquerading: Double File Extension
+File Extension
+
+**Attachment file - VirusTotal:**
+
+The attachment is flagged as malicious on VirusTotal and is categorized as a malware belonging to the Beluga phishing campaign using .htm files to capture companies' credentials. 
+MITRE ATT&CK T1566.001 - Phishing: Spearphishing Attachment 
+
+![virustotal screenshot](screenshots/email-1261-virustotal.png)
+
+**Attachment file - Hybrid Analysis:**
+
+Hybrid Analysis is also categorizing the file as malicious and provides with a screenshot of the detonated file, showing that it prompts the user for its credentials, while it impersonates a Microsoft Excel Reader window, acting as a credential harvester.
+MITRE ATT&CK T1056.003 - Web Portal Capture and T1656 – Impersonation
+
+![hybridanalysis screenshot](screenshots/email-1261-hybridanalysis-sampleresult-1.png)
+
+
+![hybridanalysis screenshot2](screenshots/email-1261-hybridanalysis-screenshotsample-1.png)
+
+**Attachment file - Static code analysis**
+
+After opening the .htm file with Sublime Text I found the URL (see line 59 on screenshot below)  used to POST the user credentials to an external website for later extraction by the attacker, with a redirect to a legitimate Microsoft website to conceal the malicious activity from the user, confirming the file acts as a credential harvester.
+MITRE ATT&CK T1056.003 - Web Portal Capture
+
+![static code screenshot](screenshots/email-1261-static-code-analysis2.png)
+
+## Section 4: MITRE ATT&CK Mapping
+
+
+| Tactic          | Technique ID | Technique Name                      |
+| --------------- | ------------ | ----------------------------------- |
+| Initial Access  | T1566.001    | Phishing: Spearphishing Attachment  |
+| Defense Evasion | T1027.006    | Obfuscated Files: HTML Smuggling    |
+| Defense Evasion | T1036.007    | Masquerading: Double File Extension |
+| Defense Evasion | T1656        | Impersonation                       |
+| Collection      | T1056.003    | Input Capture: Web Portal Capture   |
+
+## Section 5: IOCs
+
+
+| Type             | Indicator of compromise                                          |
+| ---------------- | ---------------------------------------------------------------- |
+| Sender address   | info[@]hosngpackingss[.]com                                      |
+| File name        | PO45638 - PO76483.Xls.htm                                        |
+| File SHA256 hash | 932e18daa8184ed41735e136cf0d7c148295064153e653ada7d79e8e80216d72 |
+| URL              | hxxps://glottogonic-depende[.]000webhostapp[.]com/Excel.php      |
+| Domain           | glottogonic-depende[.]000webhostapp[.]com                        |
 
 
 
+## Section 6: Suggested Defensive Measures:
 
+- Email address and domain:
+  I recommend to block emails coming from info[@]hosngpackingss[.]com and the domain hosngpackingss[.]com at the email gateway as the address is using typosquatting techniques to impersonate a legitimate brand.
+  I also recommend to conduct a search in the email gateway logs for any emails coming from the sender address or domain.
+  
+- File hash and name:
+I recommend to block the SHA256 hash of the malicious attachment 
+(932e18daa8184ed41735e136cf0d7c148295064153e653ada7d79e8e80216d72) 
+in the EDR and email gateway to prevent execution and delivery.
+I also recommend to sweep the environment for the SHA-256 hash to detect any existing instances already present.
 
-
-
+- URL and domain:
+I recommend blocking access to the malicious URL at the proxy level hxxps://glottogonic-depende[.]000webhostapp[.]com/Excel.php as it is used to harvest and exfiltrate credentials. I also recommend blocking the parent domain glottogonic-depende[.]000webhostapp[.]com entirely, as it is used to conduct malicious activity and there is no legitimate business justification for employees to access it.
 
 
 
