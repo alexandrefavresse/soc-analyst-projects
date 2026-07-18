@@ -34,42 +34,43 @@ The email is using business impersonation techniques and typosquatting technique
 
 **Artifacts**  
 
-Sending Email Address: info[@]hosngpackingss[.]com 
+- Sending Email Address: info[@]hosngpackingss[.]com µ
 
   *Note: typosquat (hosngpackagingsS)*
 
-Date Sent: 21 May 2023 19:40:13
+- Date Sent: 21 May 2023 19:40:13
 
-Sending Server IP: 146[.]70[.]149[.]246
+- Sending Server IP: 146[.]70[.]149[.]246
 
-Reverse DNS: DNS Record not found
+- Reverse DNS: DNS Record not found
 
-Recipient(s): masked[@]protonmail.com
+- Recipient(s): masked[@]protonmail.com
 
-Subject: New Business Inquiry:RE: RE:Signed Contract -NEW ORDER (PO#WB-UK-0022)
+- Subject: New Business Inquiry:RE: RE:Signed Contract -NEW ORDER (PO#WB-UK-0022)
 
-Attachments name:  PO45638 - PO76483.Xls.htm
+- Attachments name:  PO45638 - PO76483.Xls.htm
 
   *Note: double file extension .xls.htm*
 
-Attachments SHA256 hash: 932e18daa8184ed41735e136cf0d7c148295064153e653ada7d79e8e80216d72
+- Attachments SHA256 hash: 932e18daa8184ed41735e136cf0d7c148295064153e653ada7d79e8e80216d72
 
-URL: hxxps://glottogonic-depende[.]000webhostapp[.]com/Excel.php
+- URL: hxxps://glottogonic-depende[.]000webhostapp[.]com/Excel.php
 
   *Note: URL extracted from attachment static code analysis*
 
-Domain: glottogonic-depende[.]000webhostapp[.]com
+- Domain: glottogonic-depende[.]000webhostapp[.]com
 
 ## Section 2: Authentication results
 
-DMARC: none
+- DMARC: none
 
-SPF: fail 
+- SPF: fail 
 
-DKIM: none
+- DKIM: none
 
 Remarks: SPF failed, showing the sending IP 146[.]70[.]149[.]246 is not authorized for the 
 hosngpackingss[.]com domain, which is a strong indicator of spoofing.
+
 ## Section 3: Analysis
 
 **Sending server ip - whois**
