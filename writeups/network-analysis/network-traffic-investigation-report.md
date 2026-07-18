@@ -12,7 +12,7 @@ Severity: Critical
 
 Confidence: High 
 
-**Note: The date has been modified to correspond to the date on the .pcap file, the writeup was published on July 17, 2026.*
+**Note: The date has been modified to correspond to the date on the .pcap file, the writeup was published on July 18, 2026.*
 
 ## Table of Contents
 
