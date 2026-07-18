@@ -1,16 +1,16 @@
 ## Network Traffic Investigation Report
 
-Analyst: Alexandre Favresse
+  - Analyst: Alexandre Favresse
 
-Date of Analysis: 15-03-2024*
+  - Date of Analysis: 15-03-2024*
 
-Report ID: NET-2026-001
+  - Report ID: NET-2026-001
 
-Classification: True Positive 
+  - Classification: True Positive 
 
-Severity: Critical
+  - Severity: Critical
 
-Confidence: High 
+  - Confidence: High 
 
 **Note: The date has been modified to correspond to the date on the .pcap file, the writeup was published on July 18, 2026.*
 
