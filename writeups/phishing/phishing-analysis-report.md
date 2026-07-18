@@ -34,8 +34,9 @@ The email is using business impersonation techniques and typosquatting technique
 
 **Artifacts**  
 
-Sending Email Address: info[@]hosngpackingss[.]com  
-	Note: typosquat (hosngpackagingsS)
+Sending Email Address: info[@]hosngpackingss[.]com 
+
+  *Note: typosquat (hosngpackagingsS)*
 
 Date Sent: 21 May 2023 19:40:13
 
@@ -48,12 +49,14 @@ Recipient(s): masked[@]protonmail.com
 Subject: New Business Inquiry:RE: RE:Signed Contract -NEW ORDER (PO#WB-UK-0022)
 
 Attachments name:  PO45638 - PO76483.Xls.htm
-	Note: double file extension .xls.htm
+
+  *Note: double file extension .xls.htm*
 
 Attachments SHA256 hash: 932e18daa8184ed41735e136cf0d7c148295064153e653ada7d79e8e80216d72
 
 URL: hxxps://glottogonic-depende[.]000webhostapp[.]com/Excel.php
-	Note: URL extracted from attachment static code analysis
+
+  *Note: URL extracted from attachment static code analysis*
 
 Domain: glottogonic-depende[.]000webhostapp[.]com
 
