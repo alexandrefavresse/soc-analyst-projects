@@ -76,7 +76,8 @@ hosngpackingss[.]com domain, which is a strong indicator of spoofing.
 **Sending server ip - whois**
 
 After checking, the sending server IP is registered to M247-LTD-Singapore, a hosting provider with a Singapore geolocation, showing discrepancies between the sending email address, which impersonates HosnG Packaging, based in China.  
-MITRE ATT&CK T1656 - Impersonation
+
+`MITRE ATT&CK T1656 - Impersonation`
 
 ![whois screenshot](screenshots/email-1261-whoisresult.png)
 
@@ -85,20 +86,22 @@ MITRE ATT&CK T1656 - Impersonation
 The attachment "PO45638 - PO76483.Xls.htm" uses a double file 
 extension (.Xls.htm) to disguise an HTML file as a legitimate 
 Excel spreadsheet for credential harvesting purposes (see Hybrid Analysis screenshot below).
-MITRE ATT&CK T1036.007 - Masquerading: Double File Extension
-File Extension
+
+`MITRE ATT&CK T1036.007 - Masquerading: Double File Extension`
 
 **Attachment file - VirusTotal**
 
 The attachment is flagged as malicious on VirusTotal and is categorized as a malware belonging to the Beluga phishing campaign using .htm files to capture companies' credentials. 
-MITRE ATT&CK T1566.001 - Phishing: Spearphishing Attachment 
+
+`MITRE ATT&CK T1566.001 - Phishing: Spearphishing Attachment`
 
 ![virustotal screenshot](screenshots/email-1261-virustotal.png)
 
 **Attachment file - Hybrid Analysis**
 
 Hybrid Analysis is also categorizing the file as malicious and provides with a screenshot of the detonated file, showing that it prompts the user for its credentials, while it impersonates a Microsoft Excel Reader window, acting as a credential harvester.
-MITRE ATT&CK T1056.003 - Web Portal Capture and T1656 – Impersonation
+
+`MITRE ATT&CK T1056.003 - Web Portal Capture and T1656 – Impersonation`
 
 ![hybridanalysis screenshot](screenshots/email-1261-hybridanalysis-sampleresult-1.png)
 
@@ -108,7 +111,8 @@ MITRE ATT&CK T1056.003 - Web Portal Capture and T1656 – Impersonation
 **Attachment file - Static code analysis**
 
 After opening the .htm file with Sublime Text I found the URL (see line 59 on screenshot below)  used to POST the user credentials to an external website for later extraction by the attacker, with a redirect to a legitimate Microsoft website to conceal the malicious activity from the user, confirming the file acts as a credential harvester.
-MITRE ATT&CK T1056.003 - Web Portal Capture
+
+`MITRE ATT&CK T1056.003 - Web Portal Capture`
 
 ![static code screenshot](screenshots/email-1261-static-code-analysis2.png)
 
