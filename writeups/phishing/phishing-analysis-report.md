@@ -1,16 +1,16 @@
 ## Phishing analysis report
 
-Analyst: Alexandre Favresse
+  - Analyst: Alexandre Favresse
 
-Date of Analysis: 06-07-2026
+  - Date of Analysis: 06-07-2026
 
-Report ID: PHISH-2026-001
+  - Report ID: PHISH-2026-001
 
-Classification: Malicious (credential harvesting phishing email)
+  - Classification: Malicious (credential harvesting phishing email)
 
-Severity: High
+  - Severity: High
 
-Confidence: High (VirusTotal, Hybrid Analysis, SPF fail, typosquat)
+  - Confidence: High (VirusTotal, Hybrid Analysis, SPF fail, typosquat)
 
 ## Table of Contents
 
