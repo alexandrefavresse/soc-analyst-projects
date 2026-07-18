@@ -21,18 +21,18 @@ Confidence: High (VirusTotal, Hybrid Analysis, SPF fail, typosquat)
 5. [IOCs](#section-5-iocs)
 6. [Suggested Defensive Measures](#section-6-suggested-defensive-measures)
 
-**Screenshot of the email:**
+**Screenshot of the email**
 
 ![email screenshot](screenshots/email-1261-2.png)
 
 Source: https://github.com/rf-peixoto/phishing_pot (sample-1261.eml)
 ## Section 1 : Email Description and Artifacts Retrieved:
 
-**Email description:**
+**Email description**
 
 The email is using business impersonation techniques and typosquatting techniques to appear to be from the legitimate company HosnG Packaging to ask to review an attached contract for a new order, it contains bad grammar and inconsistent layout and inconsistencies regarding the company the email is trying to impersonate between the sending email address (HosnG Packaging) and the companies cited in the body under the signature of the supposed sender.
 
-**Artifacts:**  
+**Artifacts**  
 
 Sending Email Address: info[@]hosngpackingss[.]com  
 	Note: typosquat (hosngpackagingsS)
@@ -57,7 +57,7 @@ URL: hxxps://glottogonic-depende[.]000webhostapp[.]com/Excel.php
 
 Domain: glottogonic-depende[.]000webhostapp[.]com
 
-## Section 2: Authentication results:
+## Section 2: Authentication results
 
 DMARC: none
 
@@ -67,16 +67,16 @@ DKIM: none
 
 Remarks: SPF failed, showing the sending IP 146[.]70[.]149[.]246 is not authorized for the 
 hosngpackingss[.]com domain, which is a strong indicator of spoofing.
-## Section 3: Analysis:
+## Section 3: Analysis
 
-**Sending server ip - whois:**
+**Sending server ip - whois**
 
 After checking, the sending server IP is registered to M247-LTD-Singapore, a hosting provider with a Singapore geolocation, showing discrepancies between the sending email address, which impersonates HosnG Packaging, based in China.  
 MITRE ATT&CK T1656 - Impersonation
 
 ![whois screenshot](screenshots/email-1261-whoisresult.png)
 
-**Attachment file - File name:***
+**Attachment file - File name***
 
 The attachment "PO45638 - PO76483.Xls.htm" uses a double file 
 extension (.Xls.htm) to disguise an HTML file as a legitimate 
@@ -84,14 +84,14 @@ Excel spreadsheet for credential harvesting purposes (see Hybrid Analysis screen
 MITRE ATT&CK T1036.007 - Masquerading: Double File Extension
 File Extension
 
-**Attachment file - VirusTotal:**
+**Attachment file - VirusTotal**
 
 The attachment is flagged as malicious on VirusTotal and is categorized as a malware belonging to the Beluga phishing campaign using .htm files to capture companies' credentials. 
 MITRE ATT&CK T1566.001 - Phishing: Spearphishing Attachment 
 
 ![virustotal screenshot](screenshots/email-1261-virustotal.png)
 
-**Attachment file - Hybrid Analysis:**
+**Attachment file - Hybrid Analysis**
 
 Hybrid Analysis is also categorizing the file as malicious and provides with a screenshot of the detonated file, showing that it prompts the user for its credentials, while it impersonates a Microsoft Excel Reader window, acting as a credential harvester.
 MITRE ATT&CK T1056.003 - Web Portal Capture and T1656 – Impersonation
@@ -132,7 +132,7 @@ MITRE ATT&CK T1056.003 - Web Portal Capture
 
 
 
-## Section 6: Suggested Defensive Measures:
+## Section 6: Suggested Defensive Measures
 
 - Email address and domain:
   I recommend to block emails coming from info[@]hosngpackingss[.]com and the domain hosngpackingss[.]com at the email gateway as the address is using typosquatting techniques to impersonate a legitimate brand.
