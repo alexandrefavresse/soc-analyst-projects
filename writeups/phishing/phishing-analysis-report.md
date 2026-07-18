@@ -1,4 +1,4 @@
-# Phishing analysis report:
+## Phishing analysis report
 
 Analyst: Alexandre Favresse
 
