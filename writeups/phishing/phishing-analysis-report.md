@@ -34,7 +34,7 @@ The email is using business impersonation techniques and typosquatting technique
 
 **Artifacts**  
 
-- Sending Email Address: info[@]hosngpackingss[.]com µ
+- Sending Email Address: info[@]hosngpackingss[.]com 
 
   *Note: typosquat (hosngpackagingsS)*
 
