@@ -12,6 +12,15 @@ Severity: High
 
 Confidence: High (VirusTotal, Hybrid Analysis, SPF fail, typosquat)
 
+## Table of Contents
+
+1. [Email Description and Artifacts Retrieved](#section-1--email-description-and-artifacts-retrieved)
+2. [Authentication Results](#section-2-authentication-results)
+3. [Analysis](#section-3-analysis)
+4. [MITRE ATT&CK Mapping](#section-4-mitre-attck-mapping)
+5. [IOCs](#section-5-iocs)
+6. [Suggested Defensive Measures](#section-6-suggested-defensive-measures)
+
 **Screenshot of the email:**
 
 ![email screenshot](screenshots/email-1261-2.png)
