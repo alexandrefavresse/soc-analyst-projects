@@ -80,7 +80,7 @@ MITRE ATT&CK T1656 - Impersonation
 
 ![whois screenshot](screenshots/email-1261-whoisresult.png)
 
-**Attachment file - File name***
+**Attachment file - File name**
 
 The attachment "PO45638 - PO76483.Xls.htm" uses a double file 
 extension (.Xls.htm) to disguise an HTML file as a legitimate 
