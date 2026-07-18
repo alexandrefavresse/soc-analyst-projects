@@ -1,14 +1,16 @@
-# Introduction
+## Introduction
 
-The phishing analysis report present in this repo was made during a homemade lab and is presented as a simulation of a real phishing report that a SOC Analyst would write after an alert. For this purpose, I used a real phishing sample from https://github.com/rf-peixoto/phishing_pot (sample-1261.eml) to keep the simulation as realistic as possible. The goal of this exercice is to practice my analysis and reporting skills in an environment as realistic as possible, as writing reports is an important part of a SOC Analyst duty and I chose a phishing sample because phishing represents the main attack vector for initial access (MITRE ATT&CK - T1566 - Phishing). 
+The phishing analysis report present in this repo was made during a homemade lab and is presented as a simulation of a real phishing report that a SOC Analyst would write after an alert. For this purpose, I used a real phishing sample from [phishing_pot](https://github.com/rf-peixoto/phishing_pot) (sample-1261.eml) to keep the simulation as realistic as possible.
 
-Disclaimer: All data is from a public sample; recipient info masked for privacy.
+The goal of this exercise is to practice my analysis and reporting skills in an environment as realistic as possible, as writing reports is an important part of a SOC Analyst's duty. I chose a phishing sample because phishing represents the main attack vector for initial access ([MITRE ATT&CK – T1566 – Phishing](https://attack.mitre.org/techniques/T1566/)).
 
-# Scenario
+*Disclaimer: All data is from a public sample; recipient info masked for privacy.*
+
+## Scenario
 
 It's 13:00, lunch is over and an alert appears in the company's SIEM, the email gateway detected a suspicious email sent to one of the company's employees, containing a file attachment ending in .htm and flagged it. Alexandre, a junior SOC Analyst, takes ownership of the alert. After investigating it, he classifies it as a true positive and sends a phishing analysis report to justify his classification. 
 
-# Methodology and Tools
+## Methodology and Tools
 
 In this section I will cover the methodology and the tools I used to analyse the phishing sample, to have more information about it and context, please refer to the phishing-analysis-report as it is more comprehensive.
 
