@@ -27,6 +27,6 @@ After the results came back as malicious from these websites, I proceeded to a s
 
 In the last section I present suggested defensive measures such as blocking the sending email address and domain, the file hash of the attachment and the url and domain of the website used for credentials extraction. 
 
-# MITRE ATT&CK Mapping & IOCs gathering
+## MITRE ATT&CK Mapping & IOCs gathering
 
 I identified the tactics and techniques used according to the MITRE ATT&CK framework and highlighted them in the MITRE ATT&CK mapping in the analysis section of the report and I also made a recap of the tactics and techniques used below to allow a quick overview for the reader of the report. I also gathered all the IOCs that were found and dedicated a section to it to facilitate their extraction to add them to the threat intelligence program of the fictive company.
