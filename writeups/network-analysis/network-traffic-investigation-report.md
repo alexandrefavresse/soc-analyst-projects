@@ -16,7 +16,7 @@
 
 ## Table of Contents
 
-1. [Executive Summary](#section-1-executive-summary)
+1. [Executive & Technical Summaries](#section-1-executive-summary--technical-summaries)
 2. [Alert Context](#section-2--alert-context)
 3. [Investigation Methodology](#section-3-investigation-methodology)
 4. [Incident Timeline & MITRE ATT&CK Mapping](#section-4-incident-timeline--mitre-attck-mapping)
@@ -24,8 +24,13 @@
 6. [Indicators of Compromise (IOCs)](#section-6-indicators-of-compromise-iocs)
 7. [Suggested Defensive Measures](#section-7-suggested-defensive-measures)
 
-## Section 1: Executive summary
+## Section 1: Executive & Technical summaries
 
+**Executive Summary**
+
+On March 15 2024, an alert was triggered by an unusual spike in database activity and server resource usage on the company's web application. After investigating the alert, I found that an attacker managed to access the web server's database and the admin's credentials. The attacker successfully authenticated as the admin and then tried to upload a malicious file to preserve access to the web application. However, the attacker failed to connect back to the server using this malicious file, limiting the impact on the company's web application. Remediation actions are recommended below.
+
+**Technical Summary**
 On March 15 2024, an automated alert was triggered by an unusual spike in database queries and server resource usage on the company's web application. Investigation traced the spike to IP 111[.]224[.]250[.]131, which was probing the web server for SQL injection vulnerabilities.
 The attacker successfully exfiltrated the "books" database, extracted admin credentials via an UNION-based SQL injection, and escalated to unauthorized admin access.
 A PHP reverse shell was uploaded but the callback connection failed, limiting further compromise.
