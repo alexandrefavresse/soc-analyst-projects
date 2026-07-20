@@ -33,4 +33,4 @@ This report follows the same structure a SOC Analyst would use when documenting 
 ## Tools Used
 
 - **Wireshark** – Network traffic analysis and packet inspection.
-- **Bash (Linux)** – Recreating the malicious file and computing its SHA-256 hash (`sha256sum`) for verification.
+- **Bash (Linux)** – To recreate the malicious file and compute its SHA-256 hash (`sha256sum`) for verification.
