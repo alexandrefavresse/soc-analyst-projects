@@ -16,7 +16,7 @@ This report follows the same structure a SOC Analyst would use when documenting 
 
 - **Classification** – I classify the incident, assign a severity level, and provide a confidence score reflecting how certain I am that the classification is correct.
 
-- **Executive Summary** – A short overview of the most important findings, aimed at management or the SOC Lead so they can quickly grasp the situation without reading the full report.
+- **Executive & Technical Summaries** – I wrote short overviews of the most important findings, one aimed at management, using non-technical vocabulary and one aimed at the SOC Lead, using technical terms, so they can quickly grasp the situation without reading the full report.
 
 - **Alert Context** – Background on the alert that triggered the investigation.
 
