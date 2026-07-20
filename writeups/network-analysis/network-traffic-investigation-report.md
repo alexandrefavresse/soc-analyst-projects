@@ -16,7 +16,7 @@
 
 ## Table of Contents
 
-1. [Executive & Technical Summaries](#section-1-executive-summary--technical-summaries)
+1. [Executive & Technical Summaries](#section-1-executive--technical-summaries)
 2. [Alert Context](#section-2--alert-context)
 3. [Investigation Methodology](#section-3-investigation-methodology)
 4. [Incident Timeline & MITRE ATT&CK Mapping](#section-4-incident-timeline--mitre-attck-mapping)
