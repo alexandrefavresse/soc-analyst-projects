@@ -222,7 +222,7 @@ Immediate remediation actions are recommended below.
   This finding proves that the website is vulnerable to SQL injections and represents a **critical impact**, as it directly exposed authentication data that was later
   reused to gain administrative access.
 
-- **Initial access: gained administrative access**
+- **Initial access: Gained administrative access**
 
   The attacker used the exfiltrated credentials from the database dump to successfully connect to the `/admin/login.php`webpage.
   This shows that the attack led to **full administrative compromise**. 
