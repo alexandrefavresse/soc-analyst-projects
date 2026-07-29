@@ -31,6 +31,7 @@
 On March 15 2024, an alert was triggered by an unusual spike in database activity and server resource usage on the company's web application. After investigating the alert, I found that an attacker managed to access the web server's database and the admin's credentials. The attacker successfully authenticated as the admin and then tried to upload a malicious file to preserve access to the web application. However, the attacker failed to connect back to the server using this malicious file, limiting the impact on the company's web application. Remediation actions are recommended below.
 
 **Technical Summary**
+
 On March 15 2024, an automated alert was triggered by an unusual spike in database queries and server resource usage on the company's web application. Investigation traced the spike to IP 111[.]224[.]250[.]131, which was probing the web server for SQL injection vulnerabilities.
 The attacker successfully exfiltrated the "books" database, extracted admin credentials via an UNION-based SQL injection, and escalated to unauthorized admin access.
 A PHP reverse shell was uploaded but the callback connection failed, limiting further compromise.
