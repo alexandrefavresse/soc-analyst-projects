@@ -2,11 +2,11 @@
 
   This Active Directory investigation report was made during a homemade lab and simulates a real investigation report that a SOC Analyst would write after taking ownership of an alert.
 
-  To make this report and conduct my investigation, I used material from the ShadowRoast lab on CyberDefenders.* Although the material comes from this source, I went deeper in the investigation than what is asked within the framework of the lab on CyberDefenders and went out of the scope of the exercices by writing a realistic incident investigation report.
+  To make this report and conduct my investigation, I used material from the ShadowRoast lab on CyberDefenders.* Although the material comes from this source, I went deeper in the investigation than what is asked within the framework of the lab on CyberDefenders and went out of the scope of the exercises by writing a realistic incident investigation report.
 
   The goal of this exercise is to practice my analysis and reporting skills in an environment as realistic as possible, as writing reports is an important part of a SOC Analyst's duties.
 
-  I chose to conduct this investigation to sharpen my skills with Splunk, one of the most popular SIEM tools worlwide. I also found this particular material interesting because the attack was conducted in an Active Directory environment, which is used in a vast majority of organizations around the world, and it helped me understand more which tools are used to attack these systems, how they work and what to look for in this environment. 
+  I chose to conduct this investigation to sharpen my skills with Splunk, one of the most popular SIEM tools worldwide. I also found this particular material interesting because the attack was conducted in an Active Directory environment, which is used in a vast majority of organizations around the world, and it helped me understand more which tools are used to attack these systems, how they work and what to look for in this environment. 
 
 **Source: https://cyberdefenders.org/blueteam-ctf-challenges/shadowroast/*
 
@@ -31,4 +31,4 @@ This report follows the same structure a SOC Analyst would use when documenting 
 ## Tools Used
 
 - **Splunk** - I used the SIEM to analyze the logs collected from various sources and correlate them in order to retrace the timeline of the incident, identify the tactics and techniques used by the attacker and find the actions on objectives of the attacker.
-- **VirusTotal & Hybrid Analysis**: I used these platforms to conduct reputation checks of the files that I suspected to be malicious by searching for their respectives hashes to confirm their nature.
+- **VirusTotal & Hybrid Analysis**: I used these platforms to conduct reputation checks of the files that I suspected to be malicious by searching for their respective hashes to confirm their nature.
