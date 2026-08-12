@@ -2,7 +2,7 @@
 
   This Active Directory investigation report was made during a homemade lab and simulates a real investigation report that a SOC Analyst would write after taking ownership of an alert.
 
-  To make this report and conduct my investigation I used material from the ShadowRoast lab on CyberDefenders.* Although the material comes from this source, I went deeper in the investigation than what is asked within the framework of the lab on CyberDefenders and went out of the scope of the exercices by writing a realistic incident investigation report.
+  To make this report and conduct my investigation, I used material from the ShadowRoast lab on CyberDefenders.* Although the material comes from this source, I went deeper in the investigation than what is asked within the framework of the lab on CyberDefenders and went out of the scope of the exercices by writing a realistic incident investigation report.
 
   The goal of this exercise is to practice my analysis and reporting skills in an environment as realistic as possible, as writing reports is an important part of a SOC Analyst's duties.
 
