@@ -1,9 +1,11 @@
 # soc-analyst-projects
 Hello! 
 
-Welcome to my GitHub portfolio, where I share cybersecurity projects from my learning journey as an aspiring SOC Analyst. Want to connect or recruit? Find me on [LinkedIn](https://www.linkedin.com/in/alexandrefavresse/).
+Welcome to my GitHub portfolio, where I share cybersecurity projects from my learning journey as an aspiring SOC Analyst.
 
-Below you'll find two writeups I've published. Each report follows a structure similar to what a SOC Analyst would produce in a real investigation, from initial alert triage through to actionable defensive recommendations.
+Want to connect or recruit? Find me on [LinkedIn](https://www.linkedin.com/in/alexandrefavresse/).
+
+Below you'll find two write-ups that I've published. Each report follows a structure similar to what a SOC Analyst would produce in a real investigation, from initial alert triage through to actionable defensive recommendations.
 
 - **[Network Traffic Investigation Report](https://github.com/alexandrefavresse/soc-analyst-projects/blob/main/writeups/network-analysis/network-traffic-investigation-report.md)** — Using **Wireshark**, I analysed a .pcap file to reconstruct a web attack in which the attacker used SQL injection to extract admin credentials from the web server's database, then attempted Remote Code Execution via a PHP reverse shell. The report documents each investigative step and concludes with defensive measures to remediate the impact of the attack and prevent similar attacks in the future.
 
