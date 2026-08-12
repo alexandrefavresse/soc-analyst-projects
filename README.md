@@ -5,7 +5,9 @@ Welcome to my GitHub portfolio, where I share cybersecurity projects from my lea
 
 Want to connect or recruit? Find me on [LinkedIn](https://www.linkedin.com/in/alexandrefavresse/).
 
-Below you'll find two write-ups that I've published. Each report follows a structure similar to what a SOC Analyst would produce in a real investigation, from initial alert triage through to actionable defensive recommendations.
+Below you'll find the write-ups that I've published. Each report follows a structure similar to what a SOC Analyst would produce in a real investigation, from initial alert triage through to actionable defensive recommendations.
+
+- **[Active Directory Investigation Report](https://github.com/alexandrefavresse/soc-analyst-projects/blob/main/writeups/splunk/AD-investigation-report.md)** — Using **Splunk**, I investigated a breach in an Active Directory environment, reconstructing the full attack chain from initial compromise through lateral movement, privilege escalation, and persistence until data collection. The investigation uncovered abuse of Kerberos authentication, WinRM-based lateral movement, and registry-based persistence mechanisms, all mapped to the **MITRE ATT&CK Framework**. The report includes IOCs and concludes with defense-in-depth recommendations to eradicate the threat and prevent similar attacks in the future.
 
 - **[Network Traffic Investigation Report](https://github.com/alexandrefavresse/soc-analyst-projects/blob/main/writeups/network-analysis/network-traffic-investigation-report.md)** — Using **Wireshark**, I analysed a .pcap file to reconstruct a web attack in which the attacker used SQL injection to extract admin credentials from the web server's database, then attempted Remote Code Execution via a PHP reverse shell. The report documents each investigative step and concludes with defensive measures to remediate the impact of the attack and prevent similar attacks in the future.
 
