@@ -24,7 +24,7 @@ This report follows the same structure a SOC Analyst would use when documenting 
 
 - **Incident Timeline** – A chronological overview of the attack, reconstructing the attack chain and mapping it to the MITRE ATT&CK Framework.
 
-- **Indicators of Compromise (IOCs)** – A list of the IOCs identified during the investigation to support defensive actions such as eradicating malicious files, blocking the malicious IP address, . These IOCs can also be fed into the company's threat intelligence program.
+- **Indicators of Compromise (IOCs)** – A list of the IOCs identified during the investigation to support defensive actions such as eradicating malicious files and registry keys and blocking the malicious IP address. These IOCs can also be fed into the company's threat intelligence program.
 
 - **Defensive Measures** – A set of recommendations to eradicate the threat and prevent similar attacks in the future, based on defense-in-depth principles.
 
